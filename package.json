@@ -3,7 +3,7 @@
   "name": "lorem-ipsum",
   "title": "Lorem Ipsum",
   "description": "Generate placeholder content",
-  "icon": "paragraph-icon.png",
+  "icon": "assets/paragraph-icon.png",
   "author": "almatkai",
   "contributors": [
     "GastroGeek",
