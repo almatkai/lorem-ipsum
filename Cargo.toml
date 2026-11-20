@@ -1,0 +1,28 @@
+[package]
+name = "tezbar-lorem-ipsum"
+version = "0.1.1"
+edition = "2021"
+rust-version = "1.85"
+license = "MIT"
+description = "Standalone Rust Lorem Ipsum process extension for Tezbar"
+repository = "https://github.com/almatkai/lorem-ipsum"
+publish = false
+
+[[bin]]
+name = "tezbar-lorem-ipsum"
+path = "src-rust/main.rs"
+
+[dependencies]
+fastrand = "2"
+serde_json = "1"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "io-util", "io-std", "sync", "time"] }
+tezbar-extension-sdk = { git = "https://github.com/almatkai/tezbar-extension-sdk-rust.git", rev = "aaec571673ab64a85a136cf6bd054ef660c4d93c" }
+
+[dev-dependencies]
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "io-util", "process", "time"] }
+tempfile = "3"
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true
