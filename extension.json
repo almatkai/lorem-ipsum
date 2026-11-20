@@ -1,0 +1,200 @@
+{
+  "schemaVersion": 3,
+  "id": "com.tezbar.native.lorem-ipsum",
+  "slug": "lorem-ipsum",
+  "name": "Lorem Ipsum",
+  "version": "0.1.1",
+  "description": "Generate placeholder content",
+  "author": "almatkai",
+  "icon": "resources/assets/paragraph-icon.png",
+  "categories": [
+    "Data",
+    "Design Tools",
+    "Developer Tools",
+    "Web"
+  ],
+  "keywords": [
+    "generator",
+    "paragraphs",
+    "sentences",
+    "words",
+    "text",
+    "lorem",
+    "ipsum"
+  ],
+  "runtime": "rust",
+  "execution": "process",
+  "protocolVersion": 1,
+  "repository": "https://github.com/almatkai/lorem-ipsum",
+  "replaces": [
+    "raycast.lorem-ipsum",
+    "com.tezbar.lorem-ipsum"
+  ],
+  "platforms": [
+    "macOS",
+    "Windows"
+  ],
+  "preferences": [
+    {
+      "name": "action",
+      "type": "dropdown",
+      "title": "Default Action",
+      "description": "What you would like to happen when running the command",
+      "data": [
+        {
+          "value": "clipboard",
+          "title": "Copy to Clipboard"
+        },
+        {
+          "value": "paste",
+          "title": "Paste to Active App"
+        },
+        {
+          "value": "pasteAndCopy",
+          "title": "Paste and Copy to Clipboard"
+        }
+      ],
+      "default": "clipboard",
+      "required": false
+    }
+  ],
+  "commands": [
+    {
+      "name": "paragraphs",
+      "title": "Generate Paragraphs",
+      "subtitle": "Lorem Ipsum",
+      "description": "Generate random paragraphs and copy them to the clipboard",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "numberOfParagraphs",
+          "type": "text",
+          "required": false,
+          "placeholder": "No. of paragraphs"
+        }
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "runtime": "rust",
+      "concurrency": "serialize",
+      "refreshMs": null
+    },
+    {
+      "name": "sentences",
+      "title": "Generate Sentences",
+      "subtitle": "Lorem Ipsum",
+      "description": "Generate random sentences and copy them to the clipboard",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "numberOfSentences",
+          "type": "text",
+          "required": false,
+          "placeholder": "No. of sentences"
+        }
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "runtime": "rust",
+      "concurrency": "serialize",
+      "refreshMs": null
+    },
+    {
+      "name": "words",
+      "title": "Generate Words",
+      "subtitle": "Lorem Ipsum",
+      "description": "Generate random words and copy them to the clipboard",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "numberOfWords",
+          "type": "text",
+          "required": false,
+          "placeholder": "No. of words"
+        }
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "runtime": "rust",
+      "concurrency": "serialize",
+      "refreshMs": null
+    },
+    {
+      "name": "markdown",
+      "title": "Generate Markdown",
+      "subtitle": "Lorem Ipsum",
+      "description": "Generate random placeholder content as a Markdown document",
+      "mode": "no-view",
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "runtime": "rust",
+      "concurrency": "serialize",
+      "refreshMs": null
+    },
+    {
+      "name": "html",
+      "title": "Generate HTML",
+      "subtitle": "Lorem Ipsum",
+      "description": "Generate random placeholder content as an HTML document",
+      "mode": "no-view",
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "runtime": "rust",
+      "concurrency": "serialize",
+      "refreshMs": null
+    },
+    {
+      "name": "ai-generate",
+      "title": "Generate with AI",
+      "subtitle": "Lorem Ipsum",
+      "description": "Use AI to generate some placeholder text",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "topic",
+          "type": "text",
+          "required": false,
+          "placeholder": "any topic"
+        }
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "runtime": "rust",
+      "concurrency": "serialize",
+      "refreshMs": null,
+      "timeoutMs": 90000
+    }
+  ],
+  "capabilities": [
+    "clipboard.write",
+    "clipboard.pasteText",
+    "window.visibility",
+    "ai.ask"
+  ],
+  "verification": [
+    {
+      "platform": "macOS",
+      "state": "not-run",
+      "note": "Native macOS unit and real-pipe process tests passed; live GPUI, clipboard, paste focus and configured AI provider not exercised."
+    },
+    {
+      "platform": "Windows",
+      "state": "not-run",
+      "note": "Unit, real-pipe process and offline ZIP tests only; live Tezbar GPUI, clipboard, paste focus and AI provider not exercised."
+    }
+  ],
+  "artifacts": {},
+  "files": {}
+}

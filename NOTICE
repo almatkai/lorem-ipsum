@@ -1,0 +1,17 @@
+Lorem Ipsum ? standalone Rust Tezbar extension
+
+Rust implementation preserving the commands and preferences of almatkai/lorem-ipsum
+(commit 921155fc202818ed8bc0356f136bb06005d80c12), derived from Raycast extensions
+extensions/lorem-ipsum at 6734d85992290066fd31a7f5bee3cca3d3545a1a.
+Original author: AntonNiklasson; contributors: GastroGeek, stelo, enkia, j3lte.
+The HTML and Markdown document generators additionally follow Raycast extensions
+commit 5bcd41ff46cf8ad355e98f11bb7e716c6fdafc4b, src/{html,markdown,utils}.tsx.
+Tezbar adaptation: almatkai.
+See LICENSE and licenses/raycast-extensions-MIT.txt.
+
+The word dictionary and generator algorithm are ported from lorem-ipsum 2.0.10,
+Copyright (c) 2012-2020 Nickolas Kenyeres <nickolas@knicklabs.com>, ISC; see licenses/lorem-ipsum-ISC.txt.
+The original paragraph-icon.png is retained under the upstream MIT license.
+SDK and linked Rust dependencies: exact original license/notice documents and
+locked versions are inventoried under licenses/crates and licenses/THIRD_PARTY.md.
+No JavaScript dependencies are linked or required by the executable.
